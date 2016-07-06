@@ -1,0 +1,147 @@
+DART
+
+INTRO
+
+. Dart is not just a new language, it’s a new platform for modern web development
+. learning by doing
+
+
+SETUP
+. https://www.dartlang.org/downloads/
+	. Dart CLI: Command line interface to run dart applications
+	. Dartium: A version of the Google-sponsored open-source web browser Chromium that is
+				specially tailored to run Dart programs at maximum speed by including a built-in Dart Virtual
+				Machine.
+	. Dart Virtual Machine: This is the environment that runs your Dart program
+	. Dart2JS:A  program that can convert your Dart programs into JavaScript
+
+. Hello World!
+	. CLI
+	. function main() must be defined
+	. Web (dartium)
+
+PROGRAMMING FUNDAMENTALS
+. variable declaration using var
+	. var x = 5;
+	. var name = "myName";
+. Variables may also have a type
+	. String surname = "mySurname";
+	. We cannot change the type of declareted variable (type safe)
+
+. dynamic type, we can chage at runtime the type of var
+		. var x = 5;
+		  x = "string"; 
+		  String s = "sample";
+		  sample = 10;
+
+Types:
+
+type		description					exmaple
+int 		Integers 					5, -20, 0
+double 		Floating-Point Numbers 		3.14159, -3.2, 0.00
+String 		Strings 					"hello", "g", "To be or not to be?"
+bool 		Booleans 					true, false
+List 		Lists  						[1,2,3], ["hi", "bye"]
+Maps 		Maps 						{"x": 5, "y":2}		  
+
+
+Operators:
++, -, ++, --, /, *
+
+
+Strings (Unicode):
+var s = "hello";
+var s1 = 'hello';
+
+string interpolation
+int temp = 75;
+String weatherReport = "It is rainy and $temp degrees";
+String obviousReport = "If it were 30 degrees cooler it would be ${temp - 30} degrees.";
+ 	
+Controls structures:
+	if {}
+	if {} else {}
+	if {} elseif {} else {}
+	switch {case:... default:}
+
+Loops:
+	do {} while()
+	while ()
+	for (...) {}
+
+
+FUNCTIONS
+. Only function main() must be defined in a app
+. Function can or cannot return a value
+	. we can declare a function without nay return type and return something (ambigous)
+. Single-Line Functions (syntactic sugar)
+	void hello() => print('hello');
+. Optional parameters with []
+	. void repeat(String word, [int repetitions = 1])
+. Named optional parameters
+	. void repeat(String word, {int repetitions: 1, String exclamation: ""})
+	  repeat("Dog", repetitions: 2, exclamation: "!");
+
+. Functions as First-Class
+	. Functions can be referred to by their name
+	. Functions can be passed as arguments to other functions
+	. A function can be returned as the result (return value) of another function
+	. Functions can be included in data structures
+
+. Functions Within Functions
+	. Functions can be defined within other functions 
+	. can define anonymous functions too
+
+. Recursive functions
+
+DATA STRUCTURES
+. Lists
+	. useful for storing information sequentially
+	. sorted or unsorted
+	. every element in a List has an index starting from 0 (an integer representing its position in the List)
+
+. Maps
+	. useful for associating pieces of data with identifiers (like dictionary or associative arrays)
+	. each element has a key and a value; both can be of any type.
+
+. Sets
+	. operated on similarly to a List but what it represents is quite different
+		. its elements do not have indexes
+		. all of the elements in a Set must be unique
+
+
+OBJECT ORIENTED
+. classes
+	. we can define classes
+	. class can contains  Instance variables 
+	. Instance variables that begin with an underscore are treated as private by Dart
+	. class has a constructor
+	. Named Constructors to have different constructors (in DART we cannot have method with the same name)
+	. Class Variables and Class Methods 
+		. The keyword static is used for declaring a class variable or class method.
+		. Class methods cannot access instance variables
+		. A single copy of a class variable exists for allinstances of a class
+	. Inheritance using extends (Uhmmmm... i already seen this)
+	. Abstract classes
+	. Interfaces
+		. Every Dart class automatically exposes its interface for reuse
+	. casting using as
+	. mixins
+		. Mixins are another way of appending the attributes of one class onto another without using inheritance
+		. The keyword with is used to indicate that a class uses a mixin
+	. The Cascade Operator (fluent)
+
+
+ADVANCED
+. Operator overloading like c++
+. Generics 
+	. class Myclass<type>
+. Exceptions 
+	. try {
+
+	} catch(e) {
+
+	} on Exception {
+
+	}
+. 

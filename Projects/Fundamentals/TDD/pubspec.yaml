@@ -1,0 +1,4 @@
+name: my_package
+description: description
+dev_dependencies:
+   unittest: any
